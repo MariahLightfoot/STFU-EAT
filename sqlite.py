@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect('STFU-EAT.db')
+conn = sqlite3.connect('STFUEAT.db')
 c = conn.cursor()
 
 def create_table():
