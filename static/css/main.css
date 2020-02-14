@@ -8,18 +8,18 @@ body{
     padding-bottom: 75px;
 }
 
-button{
+#button{
     background-color: #82d85a;
     font-size: 20px;
     padding: 12px 25px;
     border: black 1px solid;
 }
 
-button:hover{
+#button:hover{
     cursor: pointer;
     transform: scale(1.2);
 }
 
-button:focus{
+#button:focus{
     outline: 0;
 }
