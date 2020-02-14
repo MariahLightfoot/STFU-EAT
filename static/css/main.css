@@ -1,0 +1,25 @@
+body{
+    background-color: #FF7C3A;
+    text-align: center;
+}
+
+#logo{
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+
+button{
+    background-color: #82d85a;
+    font-size: 20px;
+    padding: 12px 25px;
+    border: black 1px solid;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+button:focus{
+    outline: 0;
+}
