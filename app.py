@@ -15,12 +15,9 @@ def result():
 # if __name__ == '__main__':
 #     app.run(debug=True)
 
-lonas = Restaurant("Lonas LiL Eats", "/static/images/lonas-lil-eats.jpg") 
-lonas1 = Restaurant("Lonas LiL Eats", "/static/images/lonas-lil-eats.jpg") 
-# insertStatement = '"INSERT INTO local_stl_restaurants VALUES(?,?,?)", (lonas.id, lonas.name, lonas.image)'
-    # c.execute("INSERT INTO local_stl_restaurants VALUES(1, 'Lonas LiL Eats', '/static/images/lonas-lil-eats.jpg')")
+#lonas = Restaurant("Lonas LiL Eats", "/static/images/lonas-lil-eats.jpg") 
+vpSqaure = Restaurant("VP Square", "vp-sqaure.jpg")
+
 
 create_table()
-# data_entry(insertStatement)
-print(lonas.id)
-print(lonas1.id)
+data_entry(vpSqaure)
