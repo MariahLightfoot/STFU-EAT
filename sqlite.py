@@ -14,8 +14,8 @@ def data_entry(restaurantObject):
                 (id, name, image))
     conn.commit()
 
-def pull_img_from_db(restaurantObject):
-    c.execute('SELECT image FROM local_stl_restaurants WHERE name=?', (restaurantObject.name,))
+def pull_img_from_db(restaurantName):
+    c.execute('SELECT image FROM local_stl_restaurants WHERE name=?', (restaurantName,))
     data = c.fetchone()
     return data
     

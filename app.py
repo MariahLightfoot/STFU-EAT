@@ -1,3 +1,4 @@
+import random
 from flask import Flask, render_template
 from sqlite import create_table, data_entry, pull_img_from_db
 from Restaurant import *
@@ -13,22 +14,24 @@ def index():
 
 # create_table()
 
-lonas = Restaurant("Lonas LiL Eats", "/static/images/lonas-lil-eats.jpg") 
-# vpSqaure = Restaurant("VP Square", "vp-sqaure.jpg")
-# copperPig = Restaurant("Copper Pig", "copper-pig.jpg")
-# mochiCafe = Restaurant("Mochi Cafe", "mochi-cafe.jpg")
+lonasLilEats = Restaurant("Lonas LiL Eats", "/static/images/lonas-lil-eats.jpg") 
+vpSqaure = Restaurant("VP Square", "/static/images/vp-sqaure.jpg")
+copperPig = Restaurant("Copper Pig", "/static/images/copper-pig.jpg")
+mochiCafe = Restaurant("Mochi Cafe", "/static/images/mochi-cafe.jpg")
 # southwestMarket = Restaurant("Southwest Market", "southwest-market.jpg")
 
-# data_entry(lonas)
+# data_entry(mochiCafe)
 
-name = "Lonas LiL Eats"
-image = pull_img_from_db(lonas)[0]
+restaurantChoices = [lonasLilEats, vpSqaure, copperPig, mochiCafe]
+
+def randomRestaurantSelection():
+    value = random.randint(0, len(restaurantChoices)-1)
+    print(value)
+    return restaurantChoices[value]
+
+name = randomRestaurantSelection().name
+image = pull_img_from_db(name)[0]
 
 @app.route('/result')
 def result():
     return render_template('result.html', name=name, image=image)
-
-#thinking i can create objects, store them in array
-#random function will choose restaurant
-#can display name that way
-#look in db for img
