@@ -1,24 +1,17 @@
 from flask import Flask, render_template
-from sqlite import create_table, data_entry
+from sqlite import create_table, data_entry, pull_img_from_db
 from Restaurant import *
 
 app = Flask(__name__)
-
-name = "lonas"
-image= "/static/images/lonas-lil-eats.jpg"
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/result')
-def result():
-    return render_template('result.html', name=name, image=image)
-
 # if __name__ == '__main__':
 #     app.run(debug=True)
 
-create_table()
+# create_table()
 
 lonas = Restaurant("Lonas LiL Eats", "/static/images/lonas-lil-eats.jpg") 
 # vpSqaure = Restaurant("VP Square", "vp-sqaure.jpg")
@@ -26,5 +19,17 @@ lonas = Restaurant("Lonas LiL Eats", "/static/images/lonas-lil-eats.jpg")
 # mochiCafe = Restaurant("Mochi Cafe", "mochi-cafe.jpg")
 # southwestMarket = Restaurant("Southwest Market", "southwest-market.jpg")
 
-data_entry(lonas)
+# data_entry(lonas)
 
+name = "Lonas LiL Eats"
+image = pull_img_from_db(lonas)
+image2 = image[0]
+
+@app.route('/result')
+def result():
+    return render_template('result.html', name=name, image=image2)
+
+#thinking i can create objects, store them in array
+#random function will choose restaurant
+#can display name that way
+#look in db for img
