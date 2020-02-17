@@ -22,12 +22,11 @@ lonas = Restaurant("Lonas LiL Eats", "/static/images/lonas-lil-eats.jpg")
 # data_entry(lonas)
 
 name = "Lonas LiL Eats"
-image = pull_img_from_db(lonas)
-image2 = image[0]
+image = pull_img_from_db(lonas)[0]
 
 @app.route('/result')
 def result():
-    return render_template('result.html', name=name, image=image2)
+    return render_template('result.html', name=name, image=image)
 
 #thinking i can create objects, store them in array
 #random function will choose restaurant
