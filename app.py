@@ -15,9 +15,13 @@ def result():
 # if __name__ == '__main__':
 #     app.run(debug=True)
 
-#lonas = Restaurant("Lonas LiL Eats", "/static/images/lonas-lil-eats.jpg") 
-vpSqaure = Restaurant("VP Square", "vp-sqaure.jpg")
+# create_table()
 
+# lonas = Restaurant("Lonas LiL Eats", "/static/images/lonas-lil-eats.jpg") 
+# vpSqaure = Restaurant("VP Square", "vp-sqaure.jpg")
+# copperPig = Restaurant("Copper Pig", "copper-pig.jpg")
+# mochiCafe = Restaurant("Mochi Cafe", "mochi-cafe.jpg")
+# southwestMarket = Restaurant("Southwest Market", "southwest-market.jpg")
 
-create_table()
-data_entry(vpSqaure)
+# data_entry(lonas)
+

@@ -14,4 +14,8 @@ def data_entry(restaurantObject):
                 (id, name, image))
     conn.commit()
 
+def read_from_db():
+    c.execute('SELECT * FROM local_stl_restaurants')
+    data = c.fetchall()
+    print(data)
 
