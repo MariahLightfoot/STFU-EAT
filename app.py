@@ -1,5 +1,5 @@
 import random
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from sqlite import create_table, data_entry, pull_img_from_db
 from Restaurant import *
 
