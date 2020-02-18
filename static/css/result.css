@@ -8,12 +8,7 @@ body{
     padding-bottom: 75px;
 }
 
-#star {
-
-    z-index: -1;
-  }
-
-#suggestion {
+#restaurant-name {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
