@@ -9,19 +9,23 @@
 
 </head>
 <body>
-    <div id="logo">
-        <img src="/static/images/logo6.png" alt="STFU & EAT logo" height="150" width="150">
-    </div>
+    <div class="suggestion">
+        <div id="logo">
+            <img src="/static/images/logo6.png" alt="STFU & EAT logo" height="150" width="150">
+        </div>
+        
+        <div id="restaurant-name">
+            <h2>{{name}}</h2>
+        </div>
     
-    <div id="restaurant-name">
-        <h2>{{name}}</h2>
+        <div id="restaurant-image">
+                <img src="{{image}}" alt="restaurant image" height="300" width="500">
+        </div>
     </div>
 
-    <div id="restaurant-image">
-            <img src="{{image}}" alt="restaurant image" height="300" width="500">
-    </div>
-
+    <form action="{{directions}}">
+        <input id="button" type = "submit" value="Directions">
+    </form>
     
-
 </body>
 </html>
